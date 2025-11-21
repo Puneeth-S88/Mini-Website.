@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overall Feedback</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #efefef;
+            margin: 0;
+            padding: 0;
+        }
+
+        .feedback-container {
+            width: 60%;
+            max-width: 700px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            color: maroon;
+            font-size: 32px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .options label {
+            display: block;
+            padding: 8px 12px;
+            background: #f8f8f8;
+            margin-bottom: 6px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            border: 1px solid #ddd;
+        }
+
+        .options label:hover {
+            background: #f0f0f0;
+            border-color: maroon;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 10px;
+            accent-color: maroon;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            resize: none;
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #bbb;
+            font-size: 15px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: maroon;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin: 12px 0;
+        }
+
+        input[type="text"] {
+            width: 60px;
+            padding: 8px;
+            margin-left: 12px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: maroon;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            margin-top: 25px;
+            border: none;
+            background: maroon;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: black;
+        }
+
+        @media (max-width: 768px) {
+            .feedback-container {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2>Overall Feedback</h2>
+
+        <form action="thankyou.html">
+
+            <!-- Q1 -->
+            <p class="question">1. How satisfied are you with the overall college experience?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" required> Very Satisfied</label>
+                <label><input type="radio" name="q1"> Satisfied</label>
+                <label><input type="radio" name="q1"> Not Satisfied</label>
+            </div>
+
+            <!-- Q2 -->
+            <p class="question">2. Which areas do you think the college performs well in? (Select multiple)</p>
+            <div class="options">
+                <label><input type="checkbox" name="q2"> Quality of Teaching</label>
+                <label><input type="checkbox" name="q2"> Campus Facilities</label>
+                <label><input type="checkbox" name="q2"> Student Support Services</label>
+                <label><input type="checkbox" name="q2"> Extra-Curricular Activities</label>
+            </div>
+
+            <!-- Q3 -->
+            <p class="question">3. Do you feel the college provides value for the fees?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" required> Yes, absolutely</label>
+                <label><input type="radio" name="q3"> Somewhat</label>
+                <label><input type="radio" name="q3"> No, needs improvement</label>
+            </div>
+
+            <!-- Q4 -->
+            <p class="question">4. Would you recommend this college to others?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" required> Definitely</label>
+                <label><input type="radio" name="q4"> Maybe</label>
+                <label><input type="radio" name="q4"> No</label>
+            </div>
+
+            <!-- Q5 -->
+            <p class="question">5. Overall rating for the college (1 - 10):</p>
+            <input type="range" min="1" max="10" name="rating">
+            <input type="text">
+
+            <!-- Q6 -->
+            <p class="question">6. Additional Comments:</p>
+            <textarea placeholder="Write your feedback here..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .thank-container {
+            width: 45%;
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .tick {
+            font-size: 70px;
+            color: maroon;
+            font-weight: bold;
+            animation: pop 0.6s ease-in-out;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.3); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            color: maroon;
+            margin-top: 10px;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 18px;
+            background: maroon;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="thank-container">
+        <div class="tick">✔</div>
+
+        <h1>Thank You!</h1>
+        <p>Your feedback has been submitted successfully.</p>
+        <p>We truly appreciate your time and effort.</p>
+
+        <a href="home.html">Next Feedback</a>
+        <a href="login.html">Log out. </a>
+    </div>
+
+</body>
+</html>

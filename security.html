@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Feedback</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(to right, #1a1a1a, #2d2d2d, #550000);
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 20px;
+        }
+
+        .feedback-container {
+            width: 700px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+            backdrop-filter: blur(12px);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+            padding: 12px;
+            border-left: 5px solid maroon;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+        }
+
+        .option-group {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        /* Slider styling for rating */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 5px;
+            background: #8b0000;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: maroon;
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: maroon;
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+
+        textarea {
+            width: 100%;
+            height: 130px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            border: none;
+            outline: none;
+            padding: 12px;
+            color: #fff;
+            font-size: 15px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: maroon;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #8b0000;
+            transform: scale(1.05);
+            box-shadow: 0 0 18px rgba(139,0,0,0.8);
+        }
+
+        @media (max-width: 768px) {
+            .feedback-container {
+                width: 100%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2>Security Feedback Form</h2>
+        <form action="thankyou.html">
+
+            <!-- Q1 -->
+            <p class="question">1. How safe do you feel inside the campus?</p>
+            <div class="option-group">
+                <label><input type="radio" name="q1" required> Very Safe</label>
+                <label><input type="radio" name="q1"> Moderately Safe</label>
+                <label><input type="radio" name="q1"> Not Safe</label>
+            </div>
+
+            <!-- Q2 -->
+            <p class="question">2. Security issues you have noticed? (Select multiple)</p>
+            <div class="option-group">
+                <label><input type="checkbox" name="q2"> Poor night lighting</label>
+                <label><input type="checkbox" name="q2"> CCTV not working</label>
+                <label><input type="checkbox" name="q2"> Irresponsible guards</label>
+                <label><input type="checkbox" name="q2"> Unsecured gates</label>
+                <label><input type="checkbox" name="q2"> None</label>
+            </div>
+
+            <!-- Q3 -->
+            <p class="question">3. Behavior of security guards?</p>
+            <div class="option-group">
+                <label><input type="radio" name="q3" required> Very Polite</label>
+                <label><input type="radio" name="q3"> Normal</label>
+                <label><input type="radio" name="q3"> Rude</label>
+            </div>
+
+            <!-- Q4 -->
+            <p class="question">4. How effective is the CCTV coverage?</p>
+            <div class="option-group">
+                <label><input type="radio" name="q4" required> Excellent</label>
+                <label><input type="radio" name="q4"> Good</label>
+                <label><input type="radio" name="q4"> Poor</label>
+            </div>
+
+            <!-- Q5 -->
+            <p class="question">5. Give an overall rating for campus security (1–10)</p>
+            <div class="slider-container">
+                <input type="range" min="1" max="10" name="rating">
+                <span></span>
+            </div>
+
+            <!-- Q6 -->
+            <p class="question">6. Additional Comments:</p>
+            <textarea placeholder="Write your suggestions..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Feedback Form</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(to right, #1a1a1a, #2b2b2b, #550000);
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 20px;
+        }
+
+        .feedback-container {
+            width: 700px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+            backdrop-filter: blur(12px);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* Question Styling */
+        .question {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+            padding: 12px;
+            border-left: 5px solid maroon;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+        }
+
+        .options {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        /* Slider Styling */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 5px;
+            background: #8b0000;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: maroon;
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: maroon;
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+
+        /* Textarea */
+        textarea {
+            width: 100%;
+            height: 130px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            border: none;
+            outline: none;
+            padding: 12px;
+            color: #fff;
+            font-size: 15px;
+            resize: vertical;
+        }
+
+        /* Submit Button */
+        button {
+            width: 100%;
+            padding: 15px;
+            background: maroon;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #8b0000;
+            transform: scale(1.05);
+            box-shadow: 0 0 18px rgba(139,0,0,0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .feedback-container {
+                width: 100%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>College Feedback Form</h2>
+        <form action="thankyou.html">
+
+            <!-- Question 1 -->
+            <p class="question">1. How would you rate the academic support provided by the college?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" required> Excellent</label>
+                <label><input type="radio" name="q1"> Good</label>
+                <label><input type="radio" name="q1"> Average</label>
+                <label><input type="radio" name="q1"> Poor</label>
+            </div>
+
+            <!-- Question 2 -->
+            <p class="question">2. Which college services have been helpful for you? (Select multiple)</p>
+            <div class="options">
+                <label><input type="checkbox" name="q2"> Student Counselling</label>
+                <label><input type="checkbox" name="q2"> Placement Cell</label>
+                <label><input type="checkbox" name="q2"> Skill Development Programs</label>
+                <label><input type="checkbox" name="q2"> Administrative Support</label>
+            </div>
+
+            <!-- Question 3 -->
+            <p class="question">3. How satisfied are you with the quality of teaching?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" required> Very Satisfied</label>
+                <label><input type="radio" name="q3"> Satisfied</label>
+                <label><input type="radio" name="q3"> Neutral</label>
+                <label><input type="radio" name="q3"> Dissatisfied</label>
+            </div>
+
+            <!-- Question 4 -->
+            <p class="question">4. Are the college facilities well maintained?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" required> Yes, very well maintained</label>
+                <label><input type="radio" name="q4"> Satisfactory</label>
+                <label><input type="radio" name="q4"> Needs improvement</label>
+            </div>
+
+            <!-- Question 5 -->
+            <p class="question">5. Rate your overall satisfaction with the college (1 - 10):</p>
+            <div class="slider-container">
+                <input type="range" min="1" max="10" name="rating">
+                <span></span>
+            </div>
+
+            <!-- Question 6 -->
+            <p class="question">6. Additional Comments:</p>
+            <textarea placeholder="Write your feedback here..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
